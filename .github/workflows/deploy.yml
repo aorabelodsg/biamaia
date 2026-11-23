@@ -1,0 +1,28 @@
+# Publica o site na HostGator via FTP a cada envio para a branch main.
+# Requer os segredos FTP_SERVER, FTP_USERNAME e FTP_PASSWORD
+# (GitHub > Settings > Secrets and variables > Actions).
+name: Deploy na HostGator
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enviar arquivos por FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: public_html/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            README.md
