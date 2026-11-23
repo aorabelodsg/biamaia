@@ -1,0 +1,9 @@
+---
+# Deploy automático do cPanel (Git Version Control):
+# copia os arquivos do site do repositório para o public_html.
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/cp index.html robots.txt .htaccess favicon.ico favicon-32.png apple-touch-icon.png og-image.jpg $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R ferias-2026 $DEPLOYPATH

@@ -1,0 +1,27 @@
+# Bia Maia – configurações do servidor (Apache)
+AddDefaultCharset UTF-8
+DirectoryIndex index.html
+
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+
+# Forçar HTTPS e www (descomente as 4 linhas abaixo SOMENTE depois que o
+# certificado SSL do domínio estiver ativo no painel da hospedagem)
+# RewriteEngine On
+# RewriteCond %{HTTPS} off [OR]
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ https://www.biamaia.com.br%{REQUEST_URI} [L,R=301]
+
+# Cache de imagens e ícones (30 dias)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Qualquer página inexistente volta para a página inicial
+ErrorDocument 404 /index.html
