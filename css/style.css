@@ -130,8 +130,8 @@ figure:hover img { transform: scale(1.03); }
 }
 .site-header.scrolled { box-shadow: 0 1px 0 var(--linha); padding: 12px 0; }
 .header-inner { display: flex; justify-content: space-between; align-items: center; }
-.logo img { width: 160px; height: auto; transition: width .3s ease; }
-.site-header.scrolled .logo img { width: 130px; }
+.logo img { width: 220px; height: auto; transition: width .3s ease; }
+.site-header.scrolled .logo img { width: 180px; }
 
 .nav { display: flex; gap: 40px; }
 .nav a {
@@ -489,4 +489,10 @@ figure:hover img { transform: scale(1.03); }
   .timeline li, .contact-list li { grid-template-columns: 1fr; gap: 4px; }
   .btn { display: block; text-align: center; }
   .callout { padding-left: 20px; }
+}
+
+/* Logo no celular */
+@media (max-width: 760px) {
+  .logo img { width: 180px; }
+  .site-header.scrolled .logo img { width: 150px; }
 }
