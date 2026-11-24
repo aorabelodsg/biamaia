@@ -375,6 +375,54 @@ figure:hover img { transform: scale(1.03); }
   color: #fff;
 }
 
+/* ===== Contato ===== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: clamp(40px, 8vw, 120px);
+  align-items: stretch;
+}
+.contact-info h2 { margin-bottom: 48px; }
+.contact-list { border-top: 1px solid var(--linha); margin-bottom: 48px; }
+.contact-list li {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--linha);
+}
+.contact-list span {
+  font-size: .75rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--laranja);
+  padding-top: 4px;
+}
+.contact-list a { color: var(--tinta); transition: color .3s ease; }
+.contact-list a:hover { color: var(--azul); }
+
+.btn {
+  display: inline-block;
+  padding: 18px 36px;
+  background: var(--azul);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 500;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  transition: background .3s ease;
+}
+.btn:hover { background: var(--azul-escuro); }
+
+.contact-map { min-height: 420px; }
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  border: 0;
+  filter: grayscale(1) contrast(1.05);
+}
+
 /* ===== Rodapé ===== */
 .site-footer { padding: 96px 0 32px; }
 .footer-grid {
@@ -384,7 +432,8 @@ figure:hover img { transform: scale(1.03); }
   align-items: center;
   padding-bottom: 64px;
 }
-.footer-tag { color: var(--suave); font-size: .95rem; }
+.footer-tag { color: var(--suave); font-size: .9rem; line-height: 1.9; }
+.footer-tag a:hover { color: var(--azul); }
 .footer-bottom {
   padding-top: 32px;
   border-top: 1px solid var(--linha);
@@ -403,7 +452,8 @@ figure:hover img { transform: scale(1.03); }
 
 /* ===== Responsivo ===== */
 @media (max-width: 960px) {
-  .hero-grid, .intro-body, .osteo-grid, .about-grid { grid-template-columns: 1fr; }
+  .hero-grid, .intro-body, .osteo-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .contact-map, .contact-map iframe { min-height: 320px; }
   .hero { padding-top: 140px; }
   .hero-img { aspect-ratio: 4 / 3; order: -1; }
   .osteo-aside .sticky, .about-img { position: static; }
@@ -436,6 +486,7 @@ figure:hover img { transform: scale(1.03); }
 
   .pillars { grid-template-columns: 1fr; }
   .pillars li, .pillars li + li { padding: 32px 0; border-left: 0; border-bottom: 1px solid var(--linha); }
-  .timeline li { grid-template-columns: 1fr; gap: 4px; }
+  .timeline li, .contact-list li { grid-template-columns: 1fr; gap: 4px; }
+  .btn { display: block; text-align: center; }
   .callout { padding-left: 20px; }
 }
