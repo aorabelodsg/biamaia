@@ -1,7 +1,8 @@
-# Publica o site na HostGator via FTP a cada envio para a branch main.
+# Publica o site na Locaweb via FTP a cada envio para a branch main,
+# usando a action oficial da Locaweb (painel > Publicar via Git).
 # Requer os segredos FTP_SERVER, FTP_USERNAME e FTP_PASSWORD
 # (GitHub > Settings > Secrets and variables > Actions).
-name: Deploy na HostGator
+name: Deploy na Locaweb
 
 on:
   push:
@@ -14,15 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Enviar arquivos por FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: FTP Deploy Locaweb
+        uses: locaweb/ftp-deploy@1.0.0
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: public_html/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .github/**
-            README.md
+          localDir: "."
+          remoteDir: "public_html"
+          options: "-x ^\\.github/ -x ^README\\.md$"
