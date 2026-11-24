@@ -1,0 +1,11 @@
+{
+  "name": "biamaia",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "live-server --port=5500 --open=./"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

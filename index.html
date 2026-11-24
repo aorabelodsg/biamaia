@@ -1,155 +1,248 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bia Maia – Osteopatia, Fisioterapia e Fitoterapia | Site em construção</title>
-<meta name="description" content="Bia Maia – Osteopatia, Fisioterapia e Fitoterapia na Lagoa, Rio de Janeiro. Nosso site está em construção. Agende pelo WhatsApp (21) 96739-8252.">
-<meta name="color-scheme" content="light">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="canonical" href="https://www.biamaia.com.br/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Bia Maia">
-<meta property="og:title" content="Bia Maia – Osteopatia, Fisioterapia e Fitoterapia">
-<meta property="og:description" content="Site em construção. Agende sua consulta pelo WhatsApp (21) 96739-8252.">
-<meta property="og:url" content="https://www.biamaia.com.br/">
-<meta property="og:image" content="https://www.biamaia.com.br/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --azul:#0a78a1; --azul-esc:#075a79; --azul-claro:#e8f3f7;
-    --laranja:#dd8020; --texto:#335; --fundo:#f6fafb;
-    --d1:#6f1e45; --d2:#222655; --d3:#0e4d47; --d4:#0b7e2e; --d5:#e3b40b; --d6:#dd8020; --d7:#c00522;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{-webkit-text-size-adjust:100%}
-  body{font-family:'Quicksand',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;color:var(--azul);
-       background:var(--fundo);min-height:100vh;display:flex;flex-direction:column;line-height:1.5}
-  a{color:inherit}
-
-  /* TOPO */
-  header{background:#fff;padding:32px 16px 28px;display:flex;justify-content:center;
-         box-shadow:0 1px 0 rgba(10,120,161,.08)}
-  header img{width:100%;max-width:340px;height:auto;display:block}
-
-  /* CONTEÚDO */
-  main{flex:1;display:flex;align-items:center;justify-content:center;padding:64px 16px 72px;
-       background:radial-gradient(1200px 500px at 50% -10%, var(--azul-claro), transparent 70%)}
-  .box{max-width:720px;text-align:center}
-
-  .dots{display:flex;gap:14px;justify-content:center;margin-bottom:36px}
-  .dots span{width:14px;height:14px;border-radius:50%;opacity:.25;animation:pulse 2.8s ease-in-out infinite}
-  .dots span:nth-child(1){background:var(--d1);animation-delay:0s}
-  .dots span:nth-child(2){background:var(--d2);animation-delay:.2s}
-  .dots span:nth-child(3){background:var(--d3);animation-delay:.4s}
-  .dots span:nth-child(4){background:var(--d4);animation-delay:.6s}
-  .dots span:nth-child(5){background:var(--d5);animation-delay:.8s}
-  .dots span:nth-child(6){background:var(--d6);animation-delay:1s}
-  .dots span:nth-child(7){background:var(--d7);animation-delay:1.2s}
-  @keyframes pulse{0%,100%{opacity:.25;transform:scale(1)}30%{opacity:1;transform:scale(1.25)}60%{opacity:1;transform:scale(1)}}
-  @media (prefers-reduced-motion: reduce){.dots span{animation:none;opacity:1}}
-
-  .tag{display:inline-block;background:var(--laranja);color:#fff;font-weight:700;font-size:13px;letter-spacing:.16em;
-       text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:22px}
-  h1{font-weight:300;font-size:clamp(32px,6vw,52px);line-height:1.15;color:var(--azul);margin-bottom:20px}
-  h1 b{font-weight:600}
-  p.lead{font-size:clamp(17px,2.4vw,20px);font-weight:500;color:var(--azul-esc);max-width:560px;margin:0 auto 32px}
-
-  .areas{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:40px}
-  .areas span{border:1.5px solid rgba(10,120,161,.35);color:var(--azul);background:#fff;font-weight:600;font-size:15px;
-              padding:8px 18px;border-radius:999px}
-
-  .acoes{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-  .btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:17px;
-       padding:15px 28px;border-radius:999px;transition:transform .15s,box-shadow .15s,background .15s}
-  .btn svg{width:20px;height:20px;flex:none}
-  .btn-pri{background:var(--azul);color:#fff;box-shadow:0 8px 22px rgba(10,120,161,.28)}
-  .btn-pri:hover{background:var(--azul-esc);transform:translateY(-1px)}
-  .btn-sec{background:#fff;color:var(--azul);border:2px solid var(--azul)}
-  .btn-sec:hover{background:var(--azul-claro);transform:translateY(-1px)}
-  .btn:focus-visible{outline:3px solid var(--laranja);outline-offset:3px}
-
-  /* RODAPÉ */
-  footer{background:var(--azul);color:#fff;padding:48px 16px 24px}
-  .fwrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .fitem h2{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:10px}
-  .fitem a,.fitem p{font-size:16px;font-weight:500;text-decoration:none;line-height:1.5;word-break:break-word}
-  .fitem a:hover{text-decoration:underline}
-  .fbase{max-width:1040px;margin:36px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.25);
-         display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:14px;color:rgba(255,255,255,.8)}
-  @media (max-width:860px){.fwrap{grid-template-columns:1fr 1fr}}
-  @media (max-width:520px){
-    header{padding:24px 16px 20px} header img{max-width:250px}
-    main{padding:48px 16px 56px}
-    .fwrap{grid-template-columns:1fr;gap:22px}
-    .btn{width:100%;justify-content:center}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bia Maia · Osteopatia e Fisioterapia</title>
+  <meta name="description" content="Osteopatia, Fisioterapia e Fitoterapia com Beatriz Maia, D.O. — saúde, prevenção e longevidade no Rio de Janeiro.">
+  <!-- PRÉVIA: remover a linha abaixo ao publicar na hospedagem definitiva -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-  <picture>
-    <source srcset="/assets/logo-bia-maia.webp" type="image/webp">
-    <img src="/assets/logo-bia-maia.png" width="340" height="114" alt="Bia Maia">
-  </picture>
-</header>
-
-<main>
-  <div class="box">
-    <div class="dots" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
-    <div class="tag">Site em construção</div>
-    <h1>Em breve, um novo espaço <b>para cuidar de você</b></h1>
-    <p class="lead">Estamos preparando tudo com carinho. Enquanto isso, fale com a gente para agendar sua consulta.</p>
-
-    <div class="areas"><span>Osteopatia</span><span>Fisioterapia</span><span>Fitoterapia</span></div>
-
-    <div class="acoes">
-      <a class="btn btn-pri" href="https://wa.me/5521967398252" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.6-5.2A8.5 8.5 0 1 1 21 12z"/></svg>
-        Agendar pelo WhatsApp
+  <!-- ===== Cabeçalho ===== -->
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo" aria-label="Bia Maia — início">
+        <img src="assets/img/logo.png" alt="Bia Maia — Osteopatia | Fisioterapia" width="180">
       </a>
-      <a class="btn btn-sec" href="mailto:contato@biamaia.com.br">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        Enviar e-mail
-      </a>
+      <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#osteopatia">Osteopatia</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#depoimentos">Depoimentos</a>
+      </nav>
     </div>
-  </div>
-</main>
+  </header>
 
-<footer>
-  <div class="fwrap">
-    <div class="fitem">
-      <h2>Endereço</h2>
-      <a href="https://www.google.com/maps/search/?api=1&amp;query=R.+Gen.+Garzon,+22+-+Lagoa,+Rio+de+Janeiro+-+RJ,+22470-010" target="_blank" rel="noopener">
-        R. Gen. Garzon, 22 – 408<br>Lagoa, Rio de Janeiro – RJ<br>22470-010, Brasil
-      </a>
-    </div>
-    <div class="fitem">
-      <h2>Telefone / WhatsApp</h2>
-      <a href="https://wa.me/5521967398252" target="_blank" rel="noopener">+55 21 96739-8252</a>
-    </div>
-    <div class="fitem">
-      <h2>E-mail</h2>
-      <a href="mailto:contato@biamaia.com.br">contato@biamaia.com.br</a>
-    </div>
-    <div class="fitem">
-      <h2>Site</h2>
-      <a href="https://www.biamaia.com.br">www.biamaia.com.br</a>
-    </div>
-  </div>
-  <div class="fbase">
-    <span>© 2026 Bia Maia · Osteopatia, Fisioterapia e Fitoterapia</span>
-  </div>
-</footer>
+  <main>
 
+    <!-- ===== Hero ===== -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Osteopatia · Fisioterapia · Fitoterapia</p>
+          <h1>Entre o toque, as manipulações e a <em>conversa das moléculas</em>.</h1>
+          <p class="lead">Bem-vindos ao site de Osteopatia da Bia Maia. Aqui você poderá conhecer um pouco sobre a Osteopatia, essa nova medicina integrativa “recém-chegada” aos trópicos.</p>
+          <a href="#osteopatia" class="link-arrow">O que é a Osteopatia</a>
+        </div>
+        <figure class="hero-img reveal">
+          <img src="assets/img/hero.jpg" alt="Bia Maia atendendo uma paciente no consultório, com janelas para a vegetação">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== Introdução ===== -->
+    <section class="intro section">
+      <div class="container">
+        <div class="intro-head reveal">
+          <p class="eyebrow">Introdução</p>
+          <h2>Informar sobre as aplicabilidades da Osteopatia, da Fisioterapia e da Fitoterapia, a base do meu trabalho.</h2>
+        </div>
+
+        <ol class="pillars">
+          <li class="reveal">
+            <span class="pillar-num">01</span>
+            <h3>Osteopatia</h3>
+            <p>O toque e as manipulações.</p>
+          </li>
+          <li class="reveal">
+            <span class="pillar-num">02</span>
+            <h3>Fisioterapia</h3>
+            <p>O movimento dos músculos e das articulações.</p>
+          </li>
+          <li class="reveal">
+            <span class="pillar-num">03</span>
+            <h3>Fitoterapia</h3>
+            <p>As moléculas das plantas que irão ajudar a relaxar, desinflamar e regenerar o corpo para uma melhor saúde.</p>
+          </li>
+        </ol>
+
+        <div class="intro-body">
+          <figure class="intro-img reveal">
+            <img src="assets/img/intro.jpg" alt="Técnica manual de osteopatia na região cervical" loading="lazy">
+          </figure>
+          <div class="intro-text reveal">
+            <p>Vamos compartilhar por aqui estudos sobre saúde, prevenção e longevidade.</p>
+            <p>Nosso objetivo é trazer conteúdo para o grande público interessado em saúde, prevenção, tratamentos e estudos na área da saúde integrativa.</p>
+            <p class="signoff">Tenham uma boa leitura!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Citação ===== -->
+    <section class="quote-band">
+      <div class="container-narrow reveal">
+        <blockquote>
+          <p>“Neste instante, esteja você onde estiver, há uma casa com o seu nome. Você é o único proprietário, mas faz tempo que perdeu as chaves. Por isso, fica de fora, só vendo a fachada. Não chega a morar nela. Essa casa, teto que abriga suas mais escondidas e reprimidas lembranças, é <em>o seu corpo</em>.”</p>
+          <cite>Thérèse Bertherat</cite>
+        </blockquote>
+      </div>
+      <img class="quote-wave" src="assets/img/onda.jpg" alt="" loading="lazy">
+    </section>
+
+    <!-- ===== O que é a Osteopatia ===== -->
+    <section id="osteopatia" class="osteo section">
+      <div class="container osteo-grid">
+        <div class="osteo-aside">
+          <div class="sticky reveal">
+            <p class="eyebrow">Osteopatia</p>
+            <h2>O que é a Osteopatia?</h2>
+            <figure class="osteo-aside-img">
+              <img src="assets/img/osteo-3.jpg" alt="Modelo anatômico de pelve" loading="lazy">
+            </figure>
+          </div>
+        </div>
+
+        <div class="osteo-content">
+          <p class="lead reveal">A Osteopatia é um conceito filosófico e terapêutico, que tem como objetivo diagnosticar e tratar manualmente perdas de mobilidade e/ou bloqueios em estruturas do corpo.</p>
+
+          <p class="reveal">Considera, portanto, o indivíduo em sua globalidade. É uma medicina integrativa e preventiva, onde o corpo é um mosaico de partes integradas que interagem entre si.</p>
+
+          <p class="reveal">Com base em conhecimentos aprofundados de anatomia e fisiologia, o osteopata leva em conta todas as funções corporais que se comunicam entre si (sistema articular, visceral, neural, vascular, metabólico etc.) e também os hábitos de vida do paciente, com que frequência ele se movimenta, come e pensa.</p>
+
+          <figure class="osteo-img reveal">
+            <img src="assets/img/osteo-1.jpg" alt="Técnica osteopática craniana" loading="lazy">
+          </figure>
+
+          <p class="reveal">Devido aos maus hábitos da modernidade e ao próprio processo de envelhecimento, o corpo perde mobilidade ao longo da vida. O estresse, a falta de exercício e a alimentação tóxica dos dias de hoje são alguns dos fatores que podem gerar tensões ou bloqueios no corpo.</p>
+
+          <p class="reveal">Bloqueios estes também chamados em “Osteopatês” de <strong>“disfunções osteopáticas”</strong>, ou melhor, local de trabalho dos osteopatas. Estas disfunções podem acometer diferentes estruturas e camadas do corpo como: articulações, músculos, vísceras, fáscias, sistema neural, vascular, endócrino etc.</p>
+
+          <p class="callout reveal">Com o acúmulo dessas zonas de bloqueio, o corpo vai gerando compensações e adaptações, até o momento em que estas não funcionam mais e vem uma crise, um sintoma. O mais comum deles é a <span class="accent">Dor</span>.</p>
+
+          <p class="reveal">A clínica em osteopatia pode, portanto, trabalhar desde a prevenção, o tratamento, e até a cura de doenças e sintomas, além de atuar como cuidado paliativo em casos graves e ainda melhorar a qualidade de vida do paciente, contribuindo para a sua longevidade.</p>
+
+          <figure class="osteo-img reveal">
+            <img src="assets/img/osteo-2.jpg" alt="Mãos da osteopata trabalhando na região abdominal" loading="lazy">
+          </figure>
+
+          <p class="reveal">Como característica de sua prática, o osteopata utiliza <strong>as mãos como ferramenta de trabalho</strong>. Através de técnicas manuais, o osteopata libera as tensões e favorece o potencial de autorregulação ou autocura do organismo a reencontrar o seu equilíbrio e a saúde.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Galeria ===== -->
+    <section class="gallery" aria-label="Galeria">
+      <figure class="reveal"><img src="assets/img/galeria-1.jpg" alt="Técnica craniana com a paciente deitada" loading="lazy"></figure>
+      <figure class="reveal"><img src="assets/img/galeria-2.jpg" alt="Toque na região cervical e escapular" loading="lazy"></figure>
+      <figure class="reveal"><img src="assets/img/galeria-3.jpg" alt="Mobilização do ombro" loading="lazy"></figure>
+      <figure class="reveal"><img src="assets/img/galeria-4.jpg" alt="Bia Maia no consultório" loading="lazy"></figure>
+    </section>
+
+    <!-- ===== Sobre / Bio ===== -->
+    <section id="sobre" class="about section">
+      <div class="container about-grid">
+        <figure class="about-img reveal">
+          <img src="assets/img/bia.jpg" alt="Retrato de Beatriz Maia sentada no consultório" loading="lazy">
+        </figure>
+
+        <div class="about-text">
+          <p class="eyebrow reveal">Sobre</p>
+          <h2 class="reveal">Beatriz Maia</h2>
+          <p class="role reveal">Osteopata D.O. · Fisioterapeuta · Especialista em Fitoterapia</p>
+
+          <p class="reveal">Beatriz Maia iniciou sua formação em Fisioterapia na Universidade Federal do Rio de Janeiro (UFRJ). Primeiramente trabalhou com métodos de correção postural e cadeias musculares, como Mézières e GDS (Godelieve Denys-Struyf), em consultório no Rio de Janeiro, onde iniciou a sua formação em Osteopatia, em seguida concluída na França, na Escola de Osteopatia de Paris (EOP, École d’Ostéopathie de Paris), onde completou seus estudos e defendeu seu D.O. (Diploma de Osteopatia).</p>
+
+          <p class="reveal">Em território francês iniciou a pesquisa sobre o trabalho de Osteopatia ligado à saúde das mulheres, grávidas e bebês, e realizou várias formações de pós-graduação com osteopatas especialistas no assunto, como Elisa Boillot, Eric Simon, Dany Hertz e Claudine Argeron-Marque.</p>
+
+          <p class="reveal">Em seguida se aprofundou nos estudos de Filosofia da Osteopatia na Universidade Católica de Lyon, onde defendeu seu D.U. (Diplôme Universitaire de la Philosophie de l’Ostéopathie, UCLy). Trabalhou em sua tese as antropologias dos corpos e suas culturas, a partir de sua experiência de consultório entre o Brasil e a França.</p>
+
+          <p class="reveal">Em 2019, de volta ao Brasil, iniciou estudos em Fitoterapia, tratamento com plantas medicinais, e se tornou especialista em Fitoterapia pela Faculdade de Farmácia da UFRJ em 2021.</p>
+
+          <p class="reveal">Hoje está estabelecida em consultório no Jardim Botânico, no Rio de Janeiro, onde trata seus pacientes como osteopata e prescritora de plantas medicinais. Promove ateliês e encontros de prática de saúde e longevidade, entre o Rio e Paris.</p>
+
+          <ul class="timeline reveal">
+            <li><span>UFRJ</span>Fisioterapia</li>
+            <li><span>EOP · Paris</span>D.O. — Diploma de Osteopatia</li>
+            <li><span>UCLy · Lyon</span>D.U. Filosofia da Osteopatia</li>
+            <li><span>UFRJ · 2021</span>Especialista em Fitoterapia</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Depoimentos ===== -->
+    <section id="depoimentos" class="testimonials section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Depoimentos</p>
+          <h2>O que dizem os pacientes</h2>
+        </div>
+
+        <div class="testimonial-grid">
+          <figure class="testimonial reveal">
+            <blockquote>
+              <p>Sempre tive o entendimento de que corpo, mente e emoções estão interligados. Somos um só. Qualquer tipo de abordagem física, para mim, precisa levar isso em consideração. Bia foi a primeira osteopata com quem finalmente tenho a sensação de estar sendo ouvida em todos os níveis.</p>
+              <p>Além de me passar muita segurança técnica e mecânica em relação ao funcionamento do corpo, ela percebe o que está por trás, faz as conexões necessárias para fazer uma leitura ampla, como um ser merece ser lido e escutado. Isso dá a ela um nível de acolhimento muito acima da média, acima do que já experimentei até hoje. O nível de entrega avança a cada encontro e o resultado é sucesso total. Ela sempre me conserta! Obrigada, Bia Maia. Vida longa pra gente!</p>
+            </blockquote>
+            <figcaption><strong>Zanna</strong>Cantora e compositora</figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <blockquote>
+              <p>Procurei a Bia para recuperação pós-cirúrgica de uma operação do ligamento cruzado no meu joelho há 10 anos. De fato foi um belo encontro: profissional, simpática e delicada, com uma linguagem simples e direta, me proporcionou uma recuperação plena e rápida através de exercícios e manipulações corporais.</p>
+              <p>Graças à Bia pude retornar à minha atividade profissional, que é piloto de asa-delta, com total segurança. E continuo fazendo visitas anuais para organizar meu corpo. Obrigado, querida Bia!</p>
+            </blockquote>
+            <figcaption><strong>Ricardo Ramos</strong>Piloto de asa-delta</figcaption>
+          </figure>
+
+          <figure class="testimonial reveal">
+            <blockquote>
+              <p>Cheguei no consultório da Bia com uma dorzinha localizada na altura do ovário direito e saí de lá com um mapa do meu corpo.</p>
+              <p>A osteopatia revela a malha de interconexões subjacentes ao sintoma que aparece. É impossível seguirmos ignorando o que o corpo mostra e que as mãos e o olhar sensível do trabalho da Bia conseguem perceber. É realmente um tratamento que nos coloca em contato profundo com o nosso corpo e com as marcas das experiências que carregamos.</p>
+              <p>Além de ter aliviado o meu sintoma, ao longo das sessões minha saúde foi melhorando como um todo, conforme novas camadas de compreensão iam se desdobrando e, principalmente, conforme eu ia me aproximando e me responsabilizando pelo meu corpo. A osteopatia promoveu não apenas a reorganização das estruturas do meu corpo, mas uma mudança na minha capacidade de estar presente para o que sinto e o que se passa dentro de mim.</p>
+            </blockquote>
+            <figcaption><strong>Maria Manuela</strong>Filósofa e professora de yoga</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Encerramento ===== -->
+    <section class="closing">
+      <img src="assets/img/consultorio.jpg" alt="Consultório com amplas janelas e vista para a vegetação" loading="lazy">
+      <div class="closing-text reveal">
+        <p>Seja bem-vindo!</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Rodapé ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <img src="assets/img/logo.png" alt="Bia Maia — Osteopatia | Fisioterapia" width="160" loading="lazy">
+      <p class="footer-tag">Saúde, prevenção e longevidade.<br>Rio de Janeiro · Paris</p>
+      <!-- TODO: endereço, telefone/WhatsApp, e-mail e Instagram (aguardando conteúdo) -->
+      <a href="#topo" class="link-arrow up">Voltar ao topo</a>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span id="ano"></span> Bia Maia. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
